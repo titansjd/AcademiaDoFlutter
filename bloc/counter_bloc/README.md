@@ -1,4 +1,4 @@
-# conuter_bloc
+# counter_bloc
 
 A new Flutter project.
 
