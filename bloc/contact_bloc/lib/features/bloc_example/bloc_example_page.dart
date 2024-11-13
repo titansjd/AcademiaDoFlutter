@@ -35,7 +35,7 @@ class BlocExamplePage extends StatelessWidget {
                 child: CircularProgressIndicator(),
               );
             }, listener: (context, state) {
-              print('BlocConsumer evento do listener');
+              log('BlocConsumer evento do listener');
             }),
 
             BlocSelector<ExampleBloc, ExampleState, List<String>>(
@@ -49,8 +49,12 @@ class BlocExamplePage extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: names.length,
                 itemBuilder: (context, index) {
+                  final name = names[index];
                   return ListTile(
-                    title: Text(names[index]),
+                    onTap: () => context
+                        .read<ExampleBloc>()
+                        .add(ExampleRemoveNameEvent(name: name)),
+                    title: Text(name),
                   );
                 },
               );

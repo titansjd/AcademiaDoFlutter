@@ -6,4 +6,10 @@ class ExampleFindNameEvent extends ExampleEvent {}
 
 class ExampleAddNameEvent extends ExampleEvent {}
 
-class ExampleRemoveNameEvent extends ExampleEvent {}
+class ExampleRemoveNameEvent extends ExampleEvent {
+  ExampleRemoveNameEvent({
+    required this.name,
+  });
+
+  final String name;
+}
