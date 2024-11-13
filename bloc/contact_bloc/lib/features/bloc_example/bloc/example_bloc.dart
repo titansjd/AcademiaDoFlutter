@@ -17,6 +17,7 @@ class ExampleBloc extends Bloc<ExampleEvent, ExampleState> {
     Emitter<ExampleState> emit,
   ) async {
     final stateExample = state;
+
     if (stateExample is ExampleStateData) {
       final names = [...stateExample.names];
 
