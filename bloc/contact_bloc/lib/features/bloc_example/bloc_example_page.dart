@@ -82,6 +82,10 @@ class BlocExamplePage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.add),
+          onPressed: () =>
+              context.read<ExampleBloc>().add(ExampleAddNameEvent())),
     );
   }
 }
