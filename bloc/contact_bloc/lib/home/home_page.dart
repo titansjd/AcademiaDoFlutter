@@ -33,7 +33,8 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () => Navigator.of(context).pushNamed('/bloc/example/freezed'),
+                onTap: () =>
+                    Navigator.of(context).pushNamed('/bloc/example/freezed'),
                 child: const SizedBox(
                   height: 200,
                   width: 150,
@@ -50,22 +51,24 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              // _Button(
-              //     onTap: () =>
-              //         Navigator.of(context).pushNamed('/bloc/example/'),
-              //     label: 'Example'),
-              // _Button(
-              //     onTap: () =>
-              //         Navigator.of(context).pushNamed('/bloc/example/'),
-              //     label: 'Example Freezed'),
-              // _Button(
-              //     onTap: () =>
-              //         Navigator.of(context).pushNamed('/bloc/example/'),
-              //     label: 'Contact'),
-              // _Button(
-              //     onTap: () =>
-              //         Navigator.of(context).pushNamed('/bloc/example/'),
-              //     label: 'Contact Cubit'),
+              GestureDetector(
+                onTap: () => Navigator.of(context).pushNamed('/contacts/list'),
+                child: const SizedBox(
+                  height: 200,
+                  width: 150,
+                  child: Card(
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Contact',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

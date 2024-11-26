@@ -1,5 +1,6 @@
 import 'package:contact_bloc/features/bloc_example/bloc_example_page.dart';
 import 'package:contact_bloc/features/bloc_example/bloc_freezed/example_freezed_bloc.dart';
+import 'package:contact_bloc/features/contacts/list/contacts_list_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
                 ..add(const ExampleFreezedEvent.findNames()),
               child: const BlocFreezedExamplePage(),
             ),
+        '/contacts/list': (context) => ContactsListPage(),
       },
     );
   }
