@@ -32,6 +32,24 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).pushNamed('/bloc/example/freezed'),
+                child: const SizedBox(
+                  height: 200,
+                  width: 150,
+                  child: Card(
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Example Freezed',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               // _Button(
               //     onTap: () =>
               //         Navigator.of(context).pushNamed('/bloc/example/'),
