@@ -76,23 +76,23 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _Button({required VoidCallback onTap, required String label}) =>
-      GestureDetector(
-        onTap: onTap,
-        child: SizedBox(
-          height: 200,
-          width: 150,
-          child: Card(
-            child: Align(
-              alignment: Alignment.center,
-              child: Text(
-                label,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-        ),
-      );
+  // Widget _Button({required VoidCallback onTap, required String label}) =>
+  //     GestureDetector(
+  //       onTap: onTap,
+  //       child: SizedBox(
+  //         height: 200,
+  //         width: 150,
+  //         child: Card(
+  //           child: Align(
+  //             alignment: Alignment.center,
+  //             child: Text(
+  //               label,
+  //               style: const TextStyle(
+  //                 fontWeight: FontWeight.bold,
+  //               ),
+  //             ),
+  //           ),
+  //         ),
+  //       ),
+  //     );
 }

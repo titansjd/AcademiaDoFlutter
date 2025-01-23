@@ -11,7 +11,23 @@ class ContactsRepository {
   }
 
   Future<void> create(ContactModel model) async {
-    Dio().post('http://10.0.2.2:3031/contacts', data: model.toMap());
+    final dio = Dio();
+    final data = model.toMap();
+
+    try {
+      final respose = await dio.post(
+        'http://10.0.2.2:3031/contacts',
+        data: data,
+      );
+
+      print('contato criado com sucesso');
+    } on DioError catch (e) {
+      if (e.response != null) {
+        print('Erro HTTP: ${e.response?.statusCode}');
+      } else {
+        print('Erro de conexao: ${e.message}');
+      }
+    }
   }
 
   Future<void> update(ContactModel model) async {
