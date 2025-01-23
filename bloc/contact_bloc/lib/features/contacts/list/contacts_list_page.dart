@@ -65,8 +65,15 @@ class ContactsListPage extends StatelessWidget {
                           itemBuilder: (context, index) {
                             final contact = contacts[index];
                             return ListTile(
-                              onTap: () => Navigator.pushNamed(
-                                  context, '/contacts/update'),
+                              onTap: () async {
+                                final bloc = context.read<ContactListBloc>();
+
+                                await Navigator.pushNamed(
+                                    context, '/contacts/update',
+                                    arguments: contact);
+
+                                bloc.add(ContactListEvent.findAll());
+                              },
                               title: Text(contact.name),
                               subtitle: Text(contact.email),
                             );
